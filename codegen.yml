@@ -1,0 +1,9 @@
+schema:
+  - https://api.github.com/graphql:
+      headers:
+        Authorization: 'Bearer YOUR_TOKEN'
+overwrite: true
+generates:
+  ./src/fragmentTypes.json:
+    plugins:
+      - fragment-matcher

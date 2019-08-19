@@ -1,0 +1,195 @@
+body {
+  padding: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+#search-wrapper {
+  display: flex;
+  justify-content: center;
+}
+#search-input {
+  padding: 10px;
+  width: 400px
+}
+#search-button {
+  border-left: 0;
+  color: #fff;
+  background: lightskyblue;
+  width: 100px;
+  cursor: pointer;
+}
+#loader-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 1;
+  left: 0;
+}
+#loader-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  opacity: 0.5;
+}
+#user-list {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.user-box {
+  flex: 0 0 362px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  margin-right: 40px;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.user-overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: url('./img/octocat.png') no-repeat;
+  transition: 0.2s;
+}
+.user-box:hover .user-overlay {
+  opacity: 1;
+}
+.user-name {
+  font-size: 20px;
+  text-align: center;
+}
+.repo-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px;
+}
+.repository-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 3px;
+}
+.repository-list-item:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+.repository-metadata {
+  display: flex;
+  color: #777;
+  align-items: center;
+}
+.repository-metadata .dot {
+  background-color: #777;
+}
+#repositories-list {
+  padding: 0;
+}
+#repository-header-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+#repository-title {
+  font-size: 30px;
+}
+#issues-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+#issues-list {
+  padding: 0;
+}
+#create-issue-button {
+  padding: 5px 30px;
+  border-radius: 5px;
+  background: palegreen;
+  cursor: pointer;
+}
+.issues-list-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 20px 3px;
+  border-bottom: 1px solid #ddd;
+}
+.issue-metadata {
+  color: #999;
+}
+.modal-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+#add-issue-modal .modal-content {
+  border-radius: 0px;
+  padding: 20px 30px 5px 30px;
+}
+#add-issue-modal input {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#add-issue-modal textarea {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.modal-button {
+  margin-left: 20px;
+  padding: 5px 20px;
+  border: none;
+}
+.modal-cancel {
+  background-color: lightgreen;
+}
+.modal-action {
+  background-color: pink;
+}
